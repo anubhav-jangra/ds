@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<vector>
 #include<string>
@@ -24,6 +25,22 @@ class MinHeap {
         void build_heap() {
             for(int i = floor(this->heap_size/2); i >= 0; i--)
                 this->min_heapify(i);
+        }
+
+        void decrease_key(int key, int val) {
+            this->hp[key] = val;
+            for(int i = key; i >= 0; i /= 2) {
+                cout<<"i is -> "<<i<<endl;
+                if(this->hp[i] < this->hp[(i-1)/2])
+                    swap(this->hp[i], this->hp[(i-1)/2]);
+                else
+                    return;
+            }
+        }
+
+        void increase_key(int key, int val) {
+            this->hp[key] = val;
+            this->min_heapify(key);
         }
 
         string do_padding (unsigned index, unsigned mlength){
@@ -63,6 +80,20 @@ class MinHeap {
             this->build_heap();
         }
 
+        int extractMin() {
+            swap(this->hp[0], this->hp[--heap_size]);
+            min_heapify(0);
+            return this->hp[heap_size];
+        }
+
+        void insert(int val) {
+            if(this->hp.size() > this->heap_size)
+                this->hp[heap_size] = numeric_limits<int>::max();
+            else
+                this->hp.push_back(numeric_limits<int>::max());
+            this->decrease_key(this->heap_size++, val);
+        }
+
         void print (){
             cout<<"\n";
             unsigned mlength = 0;
@@ -74,6 +105,12 @@ class MinHeap {
             }
             cout <<  string(mlength - to_string(this->hp[0]).size(),' ');
             printer(0,mlength);
+        }
+
+        void print_as_array() {
+            for(int i = 0; i < heap_size; i++)
+                cout<<this->hp[i]<<" ";
+            cout<<endl;
         }
 
 
@@ -89,5 +126,14 @@ int main()
     for(int i = 0; i < n; i++)
         cin>>vec[i];
     MinHeap heap(vec);
+    heap.print_as_array();
     heap.print();
+    cout<<"\nNow time to insert a new element, gimme a value: ";
+    int val;
+    cin>>val;
+    heap.insert(val);
+    cout<<"After insertion the heap is -> \n";
+    heap.print_as_array();
+    heap.print();
+    return 0;
 }
