@@ -7,5 +7,8 @@
 * AVL Trees (==well there was this question on hackerrank, ill make an official code later tomorrow==)
 (==Well what do ya know i did implement it today itself....==)
 
-## Day - 3 (12/06/2018)
+### Day - 3 (12/06/2018)
 * Implemented some more stuff in min heap to make it work alongside of huffman coding
+
+### day - 4 (13/06/2018)
+* started graphs
