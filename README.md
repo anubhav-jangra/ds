@@ -12,3 +12,6 @@
 
 ### day - 4 (13/06/2018)
 * started graphs
+
+### day - 5 (14/06/2018)
+* graphs(adjacency matrix, adjacency list, breadth first search)
