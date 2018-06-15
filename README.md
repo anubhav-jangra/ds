@@ -14,4 +14,11 @@
 * started graphs
 
 ### day - 5 (14/06/2018)
-* graphs(adjacency matrix, adjacency list, breadth first search)
+* graphs
+    * adjacency matrix
+    * adjacency list
+    * breadth first search
+    * depth first search
+    * DFS applications
+        * minimum spanning trees for unweighted graph
+        * Cycle detection in O(V)
