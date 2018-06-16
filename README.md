@@ -22,3 +22,10 @@
     * DFS applications
         * minimum spanning trees for unweighted graph
         * Cycle detection in O(V)
+
+### day - 6 (15/06/2018)
+* graphs
+    * DFS applications
+        * find a path between two nodes
+        * topological sorting
+        * Strongly connected components of a graph using Kosaraju's algorithm
