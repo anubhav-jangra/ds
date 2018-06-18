@@ -33,3 +33,7 @@
 ### day - 7 (17/06/2018)
 * graphs
     * Prime's algorithm to find minimum cost spanning tree
+
+### day - 7 (18/06/2018)
+* graphs
+    * Prime's algorithm to find minimum cost spanning tree using min-heap (==Whooovv!! Took me around 5 hrs i must say is a lot hard than it appears is you don't use stl==)
