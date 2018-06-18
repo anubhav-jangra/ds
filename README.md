@@ -29,3 +29,7 @@
         * find a path between two nodes
         * topological sorting
         * Strongly connected components of a graph using Kosaraju's algorithm
+
+### day - 7 (17/06/2018)
+* graphs
+    * Prime's algorithm to find minimum cost spanning tree
