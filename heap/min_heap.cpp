@@ -29,7 +29,7 @@ class MinHeap {
 
         void decrease_key(int key, int val) {
             this->hp[key] = val;
-            for(int i = key; i >= 0; i /= 2) {
+            for(int i = key; i >= 0; i = (i-1)/2) {
                 cout<<"i is -> "<<i<<endl;
                 if(this->hp[i] < this->hp[(i-1)/2])
                     swap(this->hp[i], this->hp[(i-1)/2]);
@@ -91,6 +91,7 @@ class MinHeap {
                 this->hp[heap_size] = numeric_limits<int>::max();
             else
                 this->hp.push_back(numeric_limits<int>::max());
+            cout<<"heap size is -> "<<heap_size<<endl;
             this->decrease_key(this->heap_size++, val);
         }
 
