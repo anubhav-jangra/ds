@@ -23,7 +23,7 @@ class MaxHeap {
         }
         
         void build_heap() {
-            for(int i = floor(this->heap_size/2); i >= 0; i--)
+            for(int i = floor(this->heap_size/2)-1; i >= 0; i--)
                 this->max_heapify(i);
         }
 
